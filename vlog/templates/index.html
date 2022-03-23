@@ -1,0 +1,12 @@
+<h1>Hello world!</h1>
+
+{% if user.is_authenticated %}
+    <b>Авторизован: {{ user }}</b>
+{% else %}
+    <b>Не авторизован!</b>
+{% endif %}
+
+</br>
+<a href="{% url 'account_login' %}">Войти</a>
+</br>
+<a href="{% url 'account_logout' %}">Выйти</a>
